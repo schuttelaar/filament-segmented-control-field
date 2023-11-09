@@ -3,7 +3,7 @@
     "version": "1",
     "description": "Segmented control field for Filament forms, compatible with filament 3",
     "keywords": [
-        "schuttelaar"
+        "schuttelaar",
         "braaam",
         "laravel",
         "filament-segmented-control-field"
