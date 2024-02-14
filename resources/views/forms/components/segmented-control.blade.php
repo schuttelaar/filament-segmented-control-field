@@ -4,7 +4,7 @@
     :component="$getFieldWrapperView()"
     :field="$field"
 >
-    <div x-data="{ state: $wire.$entangle('{{ $getStatePath() }}'),
+    <div x-data="{ state: $wire.{{ $applyStateBindingModifiers('entangle(\'' . $getStatePath() . '\')') }},
 		stateValue : @json($getState()),
 		multi: {{$isMulti()}},
         toggleActive(key) {
