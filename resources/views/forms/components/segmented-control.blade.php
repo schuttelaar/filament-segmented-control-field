@@ -36,7 +36,7 @@
 		@foreach ($getOptions() as $key => $option)
 			<div x-data
                     @isset($option['tooltip']) x-tooltip.raw="{{$option['tooltip']}}" @endisset class="grow-0 text-white outline-none segment" key="{{ $key }}" color="{{ in_array($key, $getState()) ? 'danger' : 'primary' }}">
-				<input {{ in_array($key, $getState()) ? 'checked=checked' : '' }} type="checkbox" name="" id="{{ $getName() . '-' . $key }}">
+				<input :checked="stateValue.includes({{ $key }})" type="checkbox" name="" id="{{ $getName() . '-' . $key }}">
 				<label for="{{  $getName() . '-' .$key }}" class="flex gap-2 px-3 py-2" @click="toggleActive({{ $key }})">
 					@isset($option['icon'])
 					<x-dynamic-component :component="$option['icon']" class="w-4">

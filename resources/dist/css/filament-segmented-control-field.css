@@ -21,7 +21,7 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
-.filament-forms-segmented-control .segment input:checked + label {
+.filament-forms-segmented-control .segment input[checked="checked"]  + label {
   background-color: rgba(var(--primary-600));
   color: rgb(255 255 255/var(--tw-text-opacity));
 }
