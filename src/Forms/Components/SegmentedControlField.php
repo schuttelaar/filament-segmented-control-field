@@ -7,7 +7,6 @@ namespace Schuttelaar\Filament\Forms\Components;
 use Filament\Forms\Components\Field;
 use Closure;
 
-
 class SegmentedControlField extends Field
 {
     protected string $view = 'filament-segmented-control-field::forms.components.segmented-control';
@@ -36,9 +35,9 @@ class SegmentedControlField extends Field
 		return $this;
 	}
 
-    public function isMulti(): bool
+    public function isMulti(): int
     {
-        return $this->evaluate($this->multi);
+        return isset($this->multi) && $this->multi ? 1 : 0;
     }
 
     public function options(array | Closure $options): self
